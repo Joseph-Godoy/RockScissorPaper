@@ -7,9 +7,7 @@ function getComputerChoice() {
     return b;
 }
 
-let getHumanChoice = () => prompt("Ingrese su eleccion: ")
-
-
+let getHumanChoice = () => prompt("Ingrese Piedra, papel o tijeras: ")
 
 function playGame() {
 
@@ -25,13 +23,13 @@ function playGame() {
             } else if (humanChoice == 'piedra' && computerChoice == 'tijeras' || humanChoice == 'tijeras' && computerChoice == 'papel' || humanChoice == 'papel' && computerChoice == 'piedra') {
                 console.log('Eleccion computadora: ' + computerChoice);
                 console.log('Tu eleccion: ' + humanChoice)
-                console.log("Tu ganas!")
+                console.log("Punto para el humano")
                 console.log("")
                 humanScore = humanScore + 1;
             } else {
                 console.log('Eleccion computadora: ' + computerChoice);
                 console.log('Tu eleccion: ' + humanChoice)
-                console.log("Tu pierdes!")
+                console.log("Punto para la computadora")
                 console.log("")
                 computerScore = computerScore + 1;
             }
@@ -42,6 +40,13 @@ function playGame() {
     console.log("Resultados:");
     console.log('Computadora puntaje: ' + computerScore)
     console.log('Humano puntaje: ' + humanScore)
+    if (computerScore > humanScore) {
+        console.log("Gana la computadora!") 
+    } else if (computerScore == humanScore) {
+        console.log("Empate!")
+    } else {
+        console.log("Gana el humano!");
+    }
 }
 
 playGame();
