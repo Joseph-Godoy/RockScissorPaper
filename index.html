@@ -4,8 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
+    <h1>Piedra, papel o tijeras!</h1>
+    <div class="mensaje">Elige un objeto para jugar</div>
+    <div class="Juego">
+        <img class="imgCPU" src="img/nada.png">
+        <button class="reinicio">Reiniciar</button>
+        <div class="puntajes">
+            <div class="tituloPuntosJugador">Tus puntos:</div>
+            <div class="puntosJugador">0</div>
+            <div class="tituloPuntosCPU">CPU puntos:</div>
+            <div class="puntosCPU">0</div>
+        </div>
+    </div>
+    <div class="botones">
+        <button class="piedra"><img alt="piedra" class="imgPiedra" src="img/piedra.png"></button>
+        <button class="papel" class="imgPapel"><img alt="papel" class="imgPapel" src="img/Papel.webp"></button>
+        <button class="tijeras" class="imgTijeras"><img alt="piedra" class="imgTijeras" src="img/tijeras.png"></button>
+    </div>
 </body>
 </html>
